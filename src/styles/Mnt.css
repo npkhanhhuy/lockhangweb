@@ -1,0 +1,32 @@
+/* Khi màn hình rộng thì mở theo chiều dọc */
+@media (min-width: 768px) {
+  .row-group {
+    display: flex;
+    flex-direction: column; /* Xếp các input theo chiều dọc */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .row-group input {
+    margin-bottom: 10px; /* Khoảng cách giữa các input */
+    width: 100%;
+  }
+}
+
+/* Khi màn hình hẹp thì xếp theo chiều ngang */
+@media (max-width: 767px) {
+  .row-group {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các input wrap nếu không đủ chỗ */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .row-group input {
+    width: 48%; /* Input sẽ chiếm 50% chiều rộng mỗi bên */
+  }
+
+  .row-group p {
+    margin: 0 10px;
+  }
+}
